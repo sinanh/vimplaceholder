@@ -49,8 +49,7 @@ syn keyword ddfType              attributedef
 " comment region
 syn region ddfComment            start="#" end="$" contains=ddfTodo,@Spell
 " interface region
-syn region innerInterface        start="interface\s\+[A-Zx]*\s*\n*\s*{" end="}" transparent contains=ddfInterfaceType,ddfComment,ddfInterface,ddfF
-unction,innerInterfaceFunc,ddfType,ddfFuncParam,ddfString,ddfNumber
+syn region innerInterface        start="interface\s\+[A-Zx]*\s*\n*\s*{" end="}" transparent contains=ddfInterfaceType,ddfComment,ddfInterface,ddfFunction,innerInterfaceFunc,ddfType,ddfFuncParam,ddfString,ddfNumber
 " set region
 syn region innerSet              start="set\n*{" end="}" transparent contains=ddfSetParams, ddfComment
 " set attributes region
@@ -71,3 +70,4 @@ hi def link ddfNumber            Float
 hi def link ddfValue             Float
 hi def link ddfSetParam          Label
 hi def link ddfString            String
+
